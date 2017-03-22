@@ -1,4 +1,4 @@
-package com.zhuzhunew.domain;
+package com.zhuzhunew.core;
 
 import java.awt.Robot;
 
