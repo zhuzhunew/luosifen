@@ -16,7 +16,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameRobot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameRobot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/zhuzhunew/core/GameRobot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
@@ -46,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BehaivorFactory.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BehaivorFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/zhuzhunew/core/BehaivorFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
@@ -431,14 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhuzhunew/core/BehaivorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zhuzhunew/core/Action.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -455,6 +447,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zhuzhunew/core/GameRobot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zhuzhunew/core/Explorer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -463,10 +463,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zhuzhunew/core/GameRobot.java">
+    <entry file="file://$PROJECT_DIR$/src/com/zhuzhunew/core/BehaivorFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        <state relative-caret-position="125">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding />
         </state>
       </provider>
