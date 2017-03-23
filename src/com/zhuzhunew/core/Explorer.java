@@ -30,6 +30,5 @@ public class Explorer {
     public Point findLegendItemOnGround() {
         BufferedImage image = robot.createScreenCapture(rect);
         return null;
-
     }
 }
