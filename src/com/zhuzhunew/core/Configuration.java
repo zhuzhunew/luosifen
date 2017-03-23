@@ -17,4 +17,6 @@ public final class Configuration {
 
     public static final int[] LEGEND_RGB = {238, 119, 0};
     public static final int[] SET_RGB = {0, 250, 0};
+
+    public static final int CONTROLLER_GAP = 2;
 }

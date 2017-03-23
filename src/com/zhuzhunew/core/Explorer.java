@@ -10,25 +10,23 @@ import java.awt.image.BufferedImage;
  */
 public class Explorer {
     private final Robot robot;
-    private final int left;
-    private final int right;
-    private final int top;
-    private final int bot;
-    private final Rectangle rect;
 
-    public Explorer(Robot robot, int x, int y, int width, int height)
+    public Explorer(Robot robot)
     {
         this.robot = robot;
-        this.left = x;
-        this.right = x + width;
-        this.top = y;
-        this.bot = y + height;
-        this.rect = new Rectangle(x, y, width, height);
     }
 
     // Find both Legendary and Set.
-    public Point findLegendItemOnGround() {
+    public Point findFisrtLegendItemOnGroundArea(Rectangle rect) {
         BufferedImage image = robot.createScreenCapture(rect);
+        for (int i = 0; i < rect.width; i++) {
+            for (int j = 0; j < rect.height; j++) {
+                if (ColorMaster.isLegendNameTagFrontColor(image.getRGB(i, j))
+                        || ColorMaster.isSetNameTagFrontColor(image.getRGB(i, j))) {
+                    return new Point(i + rect.x, j + rect.y);
+                }
+            }
+        }
         return null;
     }
 }
