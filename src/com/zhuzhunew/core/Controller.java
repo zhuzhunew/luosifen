@@ -72,11 +72,19 @@ public class Controller {
         clickKey(KeyEvent.VK_Q);
     }
 
-    public void openPackage() {
+    public void openClosePackage() {
         clickKey(KeyEvent.VK_I);
     }
 
-    public void openMap() {
+    public void openCloseMap() {
         clickKey(KeyEvent.VK_M);
+    }
+
+    public void openCloseManu() {
+        clickKey(KeyEvent.VK_ESCAPE);
+    }
+
+    public void clearWindows() {
+        clickKey(KeyEvent.VK_SPACE);
     }
 }
