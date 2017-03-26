@@ -1,6 +1,6 @@
 package com.zhuzhunew.core;
 
-import java.awt.Robot;
+import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
@@ -19,6 +19,14 @@ public class Controller {
     public void moveMouseTo(int x, int y) {
         waiting(CONTROLLER_GAP);
         robot.mouseMove(x, y);
+    }
+
+    public void moveMouseTo(Point point) {
+        moveMouseTo(point.x, point.y);
+    }
+
+    public void moveMouseTo(int[] coordinate) {
+        robot.mouseMove(coordinate[0], coordinate[1]);
     }
 
     public void waiting(int ms) {
@@ -50,6 +58,14 @@ public class Controller {
     public void goTo(int x, int y) {
         moveMouseTo(x, y);
         leftClick();
+    }
+
+    public void goTo(Point point) {
+        goTo(point.x, point.y);
+    }
+
+    public void goTo(int[] coordinate) {
+        goTo(coordinate[0], coordinate[1]);
     }
 
     public void launchSkill1() {
@@ -86,5 +102,9 @@ public class Controller {
 
     public void clearWindows() {
         clickKey(KeyEvent.VK_SPACE);
+    }
+
+    public void confirm() {
+        clickKey(KeyEvent.VK_ENTER);
     }
 }

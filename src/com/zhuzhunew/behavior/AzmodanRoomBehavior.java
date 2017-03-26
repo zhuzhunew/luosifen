@@ -5,9 +5,9 @@ import com.zhuzhunew.action.ActionFactory;
 /**
  * Created by yifazhu on 3/23/17.
  */
-public class EnterGameBehavior extends BaseBehavior {
+public class AzmodanRoomBehavior extends BossRoomBehavior {
 
-    public EnterGameBehavior(BehaviorContext behaviorContext) {
+    public AzmodanRoomBehavior(BehaviorContext behaviorContext) {
         super(behaviorContext);
     }
 

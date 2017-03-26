@@ -5,6 +5,10 @@ import com.zhuzhunew.util.ColorMaster;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+import static com.zhuzhunew.core.Configuration.CLOSET_AVAILABLE_CHECK;
+import static com.zhuzhunew.core.Configuration.SCREEN_WIDTH;
+import static com.zhuzhunew.core.Configuration.SCREEN_HIGHT;
+
 /**
  * Created by 一帆 on 2017/3/21.
  */
@@ -28,5 +32,14 @@ public class Explorer {
             }
         }
         return null;
+    }
+
+    public boolean isClosetAvailable () {
+        return isEmptySlot(robot.createScreenCapture(new Rectangle(0, 0, SCREEN_WIDTH, SCREEN_HIGHT)),
+                CLOSET_AVAILABLE_CHECK[0], CLOSET_AVAILABLE_CHECK[1]);
+    }
+
+    public boolean isEmptySlot(BufferedImage image, int x, int y) {
+        return ColorMaster.isEmptySlotCenterColor(image.getRGB(x, y));
     }
 }
