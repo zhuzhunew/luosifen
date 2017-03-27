@@ -42,21 +42,22 @@ public class Controller {
 
     public void leftClick() {
         waiting(CONTROLLER_GAP);
-        robot.keyPress(InputEvent.BUTTON1_DOWN_MASK);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         waiting(CONTROLLER_GAP);
-        robot.keyRelease(InputEvent.BUTTON1_DOWN_MASK);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
     }
 
     public void rightClick() {
         waiting(CONTROLLER_GAP);
-        robot.keyPress(InputEvent.BUTTON3_DOWN_MASK);
+        robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
         waiting(CONTROLLER_GAP);
-        robot.keyRelease(InputEvent.BUTTON3_DOWN_MASK);
+        robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
     }
 
     public void goTo(int x, int y) {
         moveMouseTo(x, y);
+        waiting(300);
         leftClick();
     }
 

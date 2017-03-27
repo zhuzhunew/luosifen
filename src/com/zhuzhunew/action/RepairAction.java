@@ -18,6 +18,8 @@ public class RepairAction extends BaseAction {
     public void act() {
         Controller controller = actionContext.getController();
         controller.goTo(REPAIR_TAG_BUTTON);
+        controller.waiting(500);
         controller.goTo(REPAIR_BUTTON);
+        controller.waiting(500);
     }
 }

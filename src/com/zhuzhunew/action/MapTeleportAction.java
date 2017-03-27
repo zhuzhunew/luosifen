@@ -21,23 +21,29 @@ public class MapTeleportAction extends BaseAction {
     public void act() {
         Controller controller = actionContext.getController();
         controller.openCloseMap();
+        controller.waiting(500);
         controller.goTo(ZOOM_IN_MAP_BUTTON);
+        controller.waiting(500);
 
         switch(location) {
             case AZ_ROAD:
                 controller.goTo(ACT3_MAP_LOCATION);
+                controller.waiting(500);
                 controller.goTo(AZ_ROAD_MAP_LOCATION);
                 break;
             case KULLE_ROAD:
                 controller.goTo(ACT2_MAP_LOCATION);
+                controller.waiting(500);
                 controller.goTo(KULLE_ROAD_MAP_LOCATION);
                 break;
             case BASE:
                 controller.goTo(ACT1_MAP_LOCATION);
+                controller.waiting(500);
                 controller.goTo(BASE_MAP_LOCATION);
                 break;
             default:
                 break;
         }
+        controller.waiting(SCENE_GAP);
     }
 }

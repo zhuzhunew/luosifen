@@ -13,6 +13,6 @@ public class EnterGameBehavior extends BaseBehavior {
 
     @Override
     public void execute() {
-
+        behaviorContext.getActionFactory().getEnterGameAction().act();
     }
 }

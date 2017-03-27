@@ -7,14 +7,14 @@ import com.zhuzhunew.action.ActionFactory;
  *
  * Leave game then enter again to refresh the world
  */
-public class ReEnterGameBehavior extends BaseBehavior {
+public class LeaveGameBehavior extends BaseBehavior {
 
-    public ReEnterGameBehavior(BehaviorContext behaviorContext) {
+    public LeaveGameBehavior(BehaviorContext behaviorContext) {
         super(behaviorContext);
     }
 
     @Override
     public void execute() {
-
+        behaviorContext.getActionFactory().getLeaveGameAction().act();
     }
 }

@@ -8,7 +8,7 @@ import java.awt.*;
 public final class Configuration {
     private Configuration() {}
 
-    public static final int MAIN_LOOP = 10;
+    public static final int MAIN_LOOP = 2;
 
     public static final int SCREEN_WIDTH = 1720;
     public static final int SCREEN_HIGHT = 700;
@@ -23,26 +23,29 @@ public final class Configuration {
 
     public static final int CONTROLLER_GAP = 2;
 
-    public static final int SCENE_GAP = 2000;
+    public static final int SCENE_GAP = 10000;
     public static final int ENTER_GAME_DELAY = 20000;
+    public static final int LEAVE_GAME_DELAY = 10000;
+
+    public static final int[] ENTER_GAME_BUTTON = {293, 350};
+    public static final int[] LEAVE_GAME_BUTTON = {295, 328};
 
     public static final int[] CENTER_POINT = {0, 0};
 
-    public static final int[] ENTER_GAME_BUTTON = {0, 0};
+    public static final int[] DESTROY_TAG_BUTTON = {622, 329};
+    public static final int[] DESTROY_WHITE_BUTTON = {311, 212};
+    public static final int[] DESTROY_BLUE_BUTTON = {396, 212};
+    public static final int[] DESTROY_GOLDEN_BUTTON = {477, 212};
+    public static final int[] REPAIR_TAG_BUTTON = {639, 405};
+    public static final int[] REPAIR_BUTTON = {331, 398};
 
-    public static final int[] DESTROY_WHITE_BUTTON = {0, 0};
-    public static final int[] DESTROY_BLUE_BUTTON = {0, 0};
-    public static final int[] DESTROY_GOLDEN_BUTTON = {0, 0};
-    public static final int[] REPAIR_TAG_BUTTON = {0, 0};
-    public static final int[] REPAIR_BUTTON = {0, 0};
-
-    public static final int[] ZOOM_IN_MAP_BUTTON = {0, 0};
-    public static final int[] ACT1_MAP_LOCATION = {0, 0};
-    public static final int[] ACT2_MAP_LOCATION = {0, 0};
-    public static final int[] ACT3_MAP_LOCATION = {0, 0};
-    public static final int[] AZ_ROAD_MAP_LOCATION = {0, 0};
-    public static final int[] KULLE_ROAD_MAP_LOCATION = {0, 0};
-    public static final int[] BASE_MAP_LOCATION = {0, 0};
+    public static final int[] ZOOM_IN_MAP_BUTTON = {777, 110};
+    public static final int[] ACT1_MAP_LOCATION = {580, 410};
+    public static final int[] ACT2_MAP_LOCATION = {1018, 350};
+    public static final int[] ACT3_MAP_LOCATION = {548, 270};
+    public static final int[] AZ_ROAD_MAP_LOCATION = {1080, 517};
+    public static final int[] KULLE_ROAD_MAP_LOCATION = {758, 202};
+    public static final int[] BASE_MAP_LOCATION = {933, 329};
 
     // The center of the ast second slot in the last column.
     public static final int[] CLOSET_AVAILABLE_CHECK = {0, 0};
@@ -53,7 +56,7 @@ public final class Configuration {
     public static final int[][] FROM_INITIAL_TO_BLACKSMITH
             = {{0, 0}};
     public static final int[][] FROM_STATION_TO_BLACKSMITH
-            = {{0, 0}};
+            = {{1363, 128}};
     public static final int[][] FROM_TELEPORT_TO_BLACKSMITH
             = {{0, 0}};
     public static final int[][] FROM_BLACKSMITH_TO_CLOSET
