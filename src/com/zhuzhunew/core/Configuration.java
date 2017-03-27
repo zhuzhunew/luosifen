@@ -8,7 +8,7 @@ import java.awt.*;
 public final class Configuration {
     private Configuration() {}
 
-    public static final int LOOP = 10;
+    public static final int MAIN_LOOP = 10;
 
     public static final int SCREEN_WIDTH = 1720;
     public static final int SCREEN_HIGHT = 700;
