@@ -8,8 +8,8 @@ public final class Configuration {
 
     public static final int MAIN_LOOP = 2;
 
-    public static final int SCREEN_WIDTH = 3440;
-    public static final int SCREEN_HIGHT = 1440;
+    public static final int SCREEN_WIDTH = 1920;
+    public static final int SCREEN_HIGHT = 1080;
     public static final int EXPLORER_X = 0;
     public static final int EXPLORER_Y = 0;
     public static final int EXPLORER_WIDTH = 800;

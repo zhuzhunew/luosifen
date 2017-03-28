@@ -24,16 +24,18 @@ public class Test {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        int a = image.getRGB(581, 945);
-        int alpha = (a >> 24) & 0xff;
-        int r = (a >> 16) & 0xff;
-        int g = (a >> 8) & 0xff;
-        int b = a & 0xff;
-        System.out.println(a);
+
+        robot.mouseMove(1900, 1070);
+//        int a = image.getRGB(581, 945);
+//        int alpha = (a >> 24) & 0xff;
+//        int r = (a >> 16) & 0xff;
+//        int g = (a >> 8) & 0xff;
+//        int b = a & 0xff;
+//        System.out.println(a);
 //        System.out.println(alpha);
-        System.out.println(r);
-        System.out.println(g);
-        System.out.println(b);
+//        System.out.println(r);
+//        System.out.println(g);
+//        System.out.println(b);
 
 //        System.out.println(Configuration.LEGEND_RGB[0]);
 //        System.out.println(Configuration.LEGEND_RGB[1]);
