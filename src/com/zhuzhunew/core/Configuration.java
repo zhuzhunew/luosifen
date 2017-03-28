@@ -25,8 +25,8 @@ public final class Configuration {
     public static final int ENTER_GAME_DELAY = 20000;
     public static final int LEAVE_GAME_DELAY = 10000;
 
-    public static final int[] ENTER_GAME_BUTTON = {293, 350};
-    public static final int[] LEAVE_GAME_BUTTON = {295, 328};
+    public static final int[] ENTER_GAME_BUTTON = {233, 515};
+    public static final int[] LEAVE_GAME_BUTTON = {238, 480};
 
     public static final int[] CENTER_POINT = {0, 0};
 
@@ -46,7 +46,7 @@ public final class Configuration {
     public static final int[] BASE_MAP_LOCATION = {933, 329};
 
     // The center of the ast second slot in the last column.
-    public static final int[] CLOSET_AVAILABLE_CHECK = {441, 471};
+    public static final int[] CLOSET_AVAILABLE_CHECK = {435, 707};
     public static final int[][] CLOSET_TAGS = {};
     // The Slot in package except top left one (medicine).
     public static final int[][] PACKAGE_SLOTS = {};
@@ -54,11 +54,11 @@ public final class Configuration {
     public static final int[][] FROM_INITIAL_TO_BLACKSMITH
             = {{0, 0}};
     public static final int[][] FROM_STATION_TO_BLACKSMITH
-            = {{1363, 128}};
+            = {{1368, 152}};
     public static final int[][] FROM_TELEPORT_TO_BLACKSMITH
             = {{0, 0}};
     public static final int[][] FROM_BLACKSMITH_TO_CLOSET
-            = {{0, 0}};
+            = {{194, 330}};
 
     public static final int[][] AZ_ROAD_STEPS
             = {};
