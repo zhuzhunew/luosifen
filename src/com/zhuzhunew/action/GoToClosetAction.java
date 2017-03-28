@@ -20,7 +20,7 @@ public class GoToClosetAction extends BaseAction {
         Controller controller = actionContext.getController();
         for (int[] coord : FROM_BLACKSMITH_TO_CLOSET) {
             controller.goTo(coord);
-            controller.waiting(1500);
+            controller.waiting(3000);
         }
 
     }

@@ -30,20 +30,21 @@ public class GameRobot {
         BehaviorFactory behaviorFactory = new BehaviorFactory(behaviorContext);
 
         List<Behavior> behaviorChain = new ArrayList<>();
-        behaviorChain.add(behaviorFactory.getEnterGameBehavior());
-        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
-        behaviorChain.add(behaviorFactory.getBlackSmithBehavior(Position.STATION));
-        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.AZ_ROAD));
+//        behaviorChain.add(behaviorFactory.getEnterGameBehavior());
+//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.KULLE_ROAD));
+//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
+//        behaviorChain.add(behaviorFactory.getBlackSmithBehavior(Position.STATION));
+//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.AZ_ROAD));
 //        behaviorChain.add(behaviorFactory.getMapRunningBehavior());
 //        behaviorChain.add(behaviorFactory.getEnterBossRoomBehavior());
 //        behaviorChain.add(behaviorFactory.getAzmodanRoomBehavior());
-//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior());
+//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.KULLE_ROAD));
 //        behaviorChain.add(behaviorFactory.getMapRunningBehavior());
 //        behaviorChain.add(behaviorFactory.getEnterBossRoomBehavior());
 //        behaviorChain.add(behaviorFactory.getKulleRoomBehavior());
-        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
+//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
         behaviorChain.add(behaviorFactory.getBlackSmithBehavior(Position.STATION));
-//        behaviorChain.add(behaviorFactory.getClosetBehavior());
+        behaviorChain.add(behaviorFactory.getClosetBehavior());
         behaviorChain.add(behaviorFactory.getLeaveGameBehavior());
 
         Thread.sleep(1000);

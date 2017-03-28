@@ -13,6 +13,8 @@ public class ClosetBehavior extends BaseBehavior {
 
     @Override
     public void execute() {
-
+        behaviorContext.getActionFactory().getGoToClosetAction().act();
+        behaviorContext.getActionFactory().getDropToClosetAction().act();
+        behaviorContext.getActionFactory().getClearWindowsAction().act();
     }
 }

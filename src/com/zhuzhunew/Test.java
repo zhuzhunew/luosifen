@@ -27,9 +27,9 @@ public class Test {
         int x = 1428;
         int y = 584;
 
-        for (int i = 1428; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             x += i * 50;
-            for (int j = 584; j < 6; j++) {
+            for (int j = 0; j < 6; j++) {
                  y += j * 50;
                 robot.mouseMove(x, y);
                 int a = image.getRGB(x, y);

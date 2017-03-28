@@ -10,10 +10,11 @@ public final class Configuration {
 
     public static final int SCREEN_WIDTH = 1920;
     public static final int SCREEN_HIGHT = 1080;
-    public static final int EXPLORER_X = 0;
-    public static final int EXPLORER_Y = 0;
-    public static final int EXPLORER_WIDTH = 800;
-    public static final int EXPLORER_HEIGHT = 500;
+
+    public static final int GROUND_EXPLORER_X = 0;
+    public static final int GROUND_EXPLORER_Y = 0;
+    public static final int GROUND_EXPLORER_WIDTH = 800;
+    public static final int GROUND_FEXPLORER_HEIGHT = 500;
 
     public static final int[] LEGEND_RGB = {238, 119, 0};
     public static final int[] SET_RGB = {0, 250, 0};
@@ -23,7 +24,7 @@ public final class Configuration {
 
     public static final int SCENE_GAP = 10000;
     public static final int ENTER_GAME_DELAY = 20000;
-    public static final int LEAVE_GAME_DELAY = 10000;
+    public static final int LEAVE_GAME_DELAY = 12000;
 
     public static final int[] ENTER_GAME_BUTTON = {233, 515};
     public static final int[] LEAVE_GAME_BUTTON = {238, 480};
@@ -47,30 +48,30 @@ public final class Configuration {
 
     // The center of the ast second slot in the last column.
     public static final int[] CLOSET_AVAILABLE_CHECK = {435, 707};
-    public static final int[][] CLOSET_TAGS
-            = {{510, 267}, {510, 398}, {510, 523}, {510, 655}, {510, 786}};
+    public static final int[][] CLOSET_TAGS =
+            {{510, 267}, {510, 398}, {510, 523}, {510, 655}, {510, 786}};
     // The top left slot in package.
-    public static final int[] PACKAGE_SLOTS = {1428, 584};
+    public static final int[] FIRST_PACKAGE_SLOT = {1428, 584};
     // Every slot is a square, this is the length of the side.
     public static final int PACKAGE_SIZE = 50;
 
-    public static final int[][] FROM_INITIAL_TO_BLACKSMITH
-            = {{0, 0}};
-    public static final int[][] FROM_STATION_TO_BLACKSMITH
-            = {{1368, 152}};
-    public static final int[][] FROM_TELEPORT_TO_BLACKSMITH
-            = {{0, 0}};
-    public static final int[][] FROM_BLACKSMITH_TO_CLOSET
-            = {{194, 330}};
+    public static final int[][] FROM_INITIAL_TO_BLACKSMITH =
+            {{0, 0}};
+    public static final int[][] FROM_STATION_TO_BLACKSMITH =
+            {{1368, 152}};
+    public static final int[][] FROM_TELEPORT_TO_BLACKSMITH =
+            {{0, 0}};
+    public static final int[][] FROM_BLACKSMITH_TO_CLOSET =
+            {{194, 330}};
 
-    public static final int[][] AZ_ROAD_STEPS
-            = {};
-    public static final int[][] AZ_ROOM_STEPS
-            = {};
-    public static final int[][] KULLE_ROAD_STEPS
-            = {};
-    public static final int[][] KULLE_ROOM_STEPS
-            = {};
+    public static final int[][] AZ_ROAD_STEPS =
+            {};
+    public static final int[][] AZ_ROOM_STEPS =
+            {};
+    public static final int[][] KULLE_ROAD_STEPS =
+            {};
+    public static final int[][] KULLE_ROOM_STEPS =
+            {};
 
     public static final int MAX_LEGEND_PICKUP_ON_SCREEN = 10;
 

@@ -4,7 +4,7 @@ import com.zhuzhunew.core.Controller;
 import com.zhuzhunew.core.Explorer;
 
 import static com.zhuzhunew.core.Configuration.CLOSET_TAGS;
-import static com.zhuzhunew.core.Configuration.PACKAGE_SLOTS;
+import static com.zhuzhunew.core.Configuration.FIRST_PACKAGE_SLOT;
 
 /**
  * Created by yifazhu on 3/25/17.
@@ -30,11 +30,19 @@ public class DropToClosetAction extends BaseAction {
             }
         }
 
-        for (int[] slot : PACKAGE_SLOTS) {
-            controller.moveMouseTo(slot);
-            controller.rightClick();
-            if (!explorer.isClosetAvailable()) {
-                controller.goTo(CLOSET_TAGS[++tagNum]);
+        controller.waiting(500);
+
+        int x, y;
+        for (int i = 0; i < 10; i++) {
+            x = FIRST_PACKAGE_SLOT[0] + i * 50;
+            for (int j = 0; j < 6; j++) {
+                y = FIRST_PACKAGE_SLOT[1] + j * 50;
+                controller.moveMouseTo(x, y);
+                controller.rightClick();
+                if (!explorer.isClosetAvailable()) {
+                    controller.goTo(CLOSET_TAGS[++tagNum]);
+                }
+                controller.waiting(200);
             }
         }
     }
