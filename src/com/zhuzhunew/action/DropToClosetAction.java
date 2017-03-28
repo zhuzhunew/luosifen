@@ -24,6 +24,7 @@ public class DropToClosetAction extends BaseAction {
         for (int i = 0; i < CLOSET_TAGS.length; i++) {
             int[] tag = CLOSET_TAGS[i];
             controller.goTo(tag);
+            controller.waiting(1000);
             if (explorer.isClosetAvailable()) {
                 tagNum = i;
                 break;
@@ -41,6 +42,7 @@ public class DropToClosetAction extends BaseAction {
                 controller.rightClick();
                 if (!explorer.isClosetAvailable()) {
                     controller.goTo(CLOSET_TAGS[++tagNum]);
+                    controller.waiting(1000);
                 }
                 controller.waiting(200);
             }

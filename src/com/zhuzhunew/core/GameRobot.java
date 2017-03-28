@@ -30,9 +30,9 @@ public class GameRobot {
         BehaviorFactory behaviorFactory = new BehaviorFactory(behaviorContext);
 
         List<Behavior> behaviorChain = new ArrayList<>();
-//        behaviorChain.add(behaviorFactory.getEnterGameBehavior());
-//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.KULLE_ROAD));
-//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
+        behaviorChain.add(behaviorFactory.getEnterGameBehavior());
+        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.KULLE_ROAD));
+        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
 //        behaviorChain.add(behaviorFactory.getBlackSmithBehavior(Position.STATION));
 //        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.AZ_ROAD));
 //        behaviorChain.add(behaviorFactory.getMapRunningBehavior());
@@ -47,7 +47,7 @@ public class GameRobot {
         behaviorChain.add(behaviorFactory.getClosetBehavior());
         behaviorChain.add(behaviorFactory.getLeaveGameBehavior());
 
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         for (int i = 0; i < MAIN_LOOP; i++) {
             for (Behavior behavior : behaviorChain) {
                 behavior.execute();
