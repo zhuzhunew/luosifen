@@ -24,17 +24,26 @@ public class Test {
             e.printStackTrace();
         }
 
-        robot.mouseMove(435, 707);
-        int a = image.getRGB(435, 707);
-        int alpha = (a >> 24) & 0xff;
-        int r = (a >> 16) & 0xff;
-        int g = (a >> 8) & 0xff;
-        int b = a & 0xff;
-        System.out.println(a);
-        System.out.println(alpha);
-        System.out.println(r);
-        System.out.println(g);
-        System.out.println(b);
+        int x = 1428;
+        int y = 584;
+
+        for (int i = 1428; i < 10; i++) {
+            x += i * 50;
+            for (int j = 584; j < 6; j++) {
+                 y += j * 50;
+                robot.mouseMove(x, y);
+                int a = image.getRGB(x, y);
+                int r = (a >> 16) & 0xff;
+                int g = (a >> 8) & 0xff;
+                int b = a & 0xff;
+                System.out.println(a);
+                System.out.println(r);
+                System.out.println(g);
+                System.out.println(b);
+                robot.delay(800);
+            }
+        }
+
 
 //        System.out.println(Configuration.LEGEND_RGB[0]);
 //        System.out.println(Configuration.LEGEND_RGB[1]);
