@@ -15,7 +15,5 @@ public class InitFightAction extends BaseAction {
     public void act() {
         Controller controller = actionContext.getController();
         controller.launchSkill4();
-        controller.launchSkill3();
-        //TODO
     }
 }

@@ -16,8 +16,10 @@ public class MapRunningBehavior extends BaseBehavior {
 
     @Override
     public void execute() {
+        behaviorContext.getActionFactory().getInitFightAction().act();
         for (int[] step : steps) {
-
+            behaviorContext.getActionFactory().getStepFightAction(step).act();
         }
+        //behaviorContext.getActionFactory().getPickupLegendAction();
     }
 }
