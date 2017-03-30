@@ -6,7 +6,7 @@ package com.zhuzhunew.core;
 public final class Configuration {
     private Configuration() {}
 
-    public static final int MAIN_LOOP = 2;
+    public static final int MAIN_LOOP = 1;
 
     public static final int SCREEN_WIDTH = 1920;
     public static final int SCREEN_HIGHT = 1080;
