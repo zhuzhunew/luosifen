@@ -30,7 +30,9 @@ public class StepFightAction extends BaseAction {
         controller.launchSkill1();
         controller.waiting(500);
         controller.launchSkill1();
-        controller.waiting(1000);
+        controller.waiting(500);
+        controller.rightClick();
+        controller.waiting(500);
 
         for (int i = 0; i < 2; i++) {
             controller.launchSkill1();
@@ -38,7 +40,9 @@ public class StepFightAction extends BaseAction {
             controller.launchSkill1();
             controller.waiting(500);
             controller.launchSkill1();
-            controller.waiting(1000);
+            controller.waiting(500);
+            controller.rightClick();
+            controller.waiting(500);
         }
 
         controller.waiting(7000);
