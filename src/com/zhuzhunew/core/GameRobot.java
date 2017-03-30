@@ -48,7 +48,7 @@ public class GameRobot {
 //        behaviorChain.add(behaviorFactory.getClosetBehavior());
 //        behaviorChain.add(behaviorFactory.getLeaveGameBehavior());
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         for (int i = 0; i < MAIN_LOOP; i++) {
             for (Behavior behavior : behaviorChain) {
                 behavior.execute();

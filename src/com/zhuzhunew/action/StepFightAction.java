@@ -25,22 +25,26 @@ public class StepFightAction extends BaseAction {
         controller.moveMouseTo(step);
         controller.waiting(100);
         controller.launchSkill1();
-        controller.waiting(500);
+        controller.waiting(800);
         controller.moveMouseTo(CENTER_POINT);
         controller.launchSkill1();
-        controller.waiting(500);
+        controller.waiting(800);
         controller.launchSkill1();
         controller.waiting(1000);
+        controller.rightClick();
+        controller.waiting(3500);
 
         for (int i = 0; i < 2; i++) {
             controller.launchSkill1();
-            controller.waiting(500);
+            controller.waiting(800);
             controller.launchSkill1();
-            controller.waiting(500);
+            controller.waiting(800);
             controller.launchSkill1();
             controller.waiting(1000);
+            controller.rightClick();
+            controller.waiting(3500);
         }
 
-        controller.waiting(7000);
+        //controller.waiting(6000);
     }
 }

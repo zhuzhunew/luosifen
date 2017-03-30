@@ -29,7 +29,7 @@ public final class Configuration {
     public static final int[] ENTER_GAME_BUTTON = {233, 515};
     public static final int[] LEAVE_GAME_BUTTON = {238, 480};
 
-    public static final int[] CENTER_POINT = {960, 500};
+    public static final int[] CENTER_POINT = {960, 503};
 
     public static final int[] DESTROY_TAG_BUTTON = {508, 484};
     public static final int[] DESTROY_WHITE_BUTTON = {254, 290};
@@ -65,7 +65,10 @@ public final class Configuration {
             {{194, 330}};
 
     public static final int[][] AZ_ROAD_STEPS =
-            {{1600, 446}, {1504, 190}, {1569, 182}, {1488, 125}, {1356, 101}, {1081, 100}};
+            {{1600, 446}, {1554, 190}, {1589, 182}, {1600, 125}, {1586, 101}, {1288, 100},
+                    {1117, 1}, {1187, 1}, {718, 0}, {800, 0}, {1304, 0}, {1708, 412}, {1527, 43},
+                    {1786, 280}, {1800, 808}, {1715, 920}, {1285, 948}, {1806, 589}, {1552, 42},
+                    {1709, 100}, {1585, 16}, {1624, 123}};
     public static final int[][] AZ_ROOM_STEPS =
             {};
     public static final int[][] KULLE_ROAD_STEPS =
