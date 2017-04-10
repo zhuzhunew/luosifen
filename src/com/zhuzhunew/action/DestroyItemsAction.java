@@ -1,6 +1,7 @@
 package com.zhuzhunew.action;
 
 import com.zhuzhunew.core.Controller;
+import com.zhuzhunew.core.Explorer;
 
 import static com.zhuzhunew.core.Configuration.*;
 
@@ -21,14 +22,25 @@ public class DestroyItemsAction extends BaseAction {
         controller.goTo(DESTROY_WHITE_BUTTON);
         controller.waiting(500);
         controller.confirm();
-        controller.confirm();
+        controller.waiting(500);
+        closeChat();
         controller.goTo(DESTROY_BLUE_BUTTON);
         controller.waiting(500);
         controller.confirm();
-        controller.confirm();
+        controller.waiting(500);
+        closeChat();
         controller.goTo(DESTROY_GOLDEN_BUTTON);
         controller.waiting(500);
         controller.confirm();
-        controller.confirm();
+        controller.waiting(500);
+        closeChat();
+    }
+
+    private void closeChat() {
+        Explorer explorer = actionContext.getExplorer();
+        Controller controller = actionContext.getController();
+        if (explorer.isChatting()) {
+            controller.confirm();
+        }
     }
 }

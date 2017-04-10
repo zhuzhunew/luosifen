@@ -1,5 +1,6 @@
 package com.zhuzhunew.action;
 
+import com.zhuzhunew.behavior.MapRunningBehavior;
 import com.zhuzhunew.type.MapLocation;
 import com.zhuzhunew.type.Position;
 
@@ -24,6 +25,8 @@ public class ActionFactory {
     PickupLegendAction pickupLegendAction;
     RepairAction repairAction;
     StepFightAction stepFightAction;
+    DeathAction deathAction;
+    CheckBossRoomAction checkBossRoomAction;
 
     public ActionFactory(ActionContext actionContext) {
         this.actionContext = actionContext;
@@ -69,8 +72,8 @@ public class ActionFactory {
         return new MapTeleportAction(actionContext, location);
     }
 
-    public PickupLegendAction getPickupLegendAction(Rectangle rectangle) {
-        return new PickupLegendAction(actionContext, rectangle);
+    public PickupLegendAction getPickupLegendAction(Rectangle rectangle, MapRunningBehavior.StopFlag stopFlag) {
+        return new PickupLegendAction(actionContext, rectangle, stopFlag);
     }
 
     public RepairAction getRepairAction() {
@@ -78,6 +81,19 @@ public class ActionFactory {
     }
 
     public StepFightAction getStepFightAction(int[] step) {
-        return new StepFightAction(actionContext, step);
+        if (stepFightAction == null) {
+            stepFightAction = new StepFightAction(actionContext, step);
+        } else{
+            stepFightAction.setStep(step);
+        }
+        return stepFightAction;
+    }
+
+    public DeathAction getDeathAction(MapRunningBehavior.StopFlag stopFlag) {
+        return new DeathAction(actionContext, stopFlag);
+    }
+
+    public CheckBossRoomAction getCheckBossRoomAction(MapRunningBehavior.StopFlag stopFlag) {
+        return new CheckBossRoomAction(actionContext, stopFlag);
     }
 }

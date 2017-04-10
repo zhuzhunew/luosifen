@@ -1,6 +1,7 @@
 package com.zhuzhunew.action;
 
 import com.zhuzhunew.core.Controller;
+import com.zhuzhunew.core.Explorer;
 import com.zhuzhunew.type.MapLocation;
 
 import static com.zhuzhunew.core.Configuration.*;
@@ -20,10 +21,10 @@ public class EnterBossRoomAction extends BaseAction {
     @Override
     public void act() {
         Controller controller = actionContext.getController();
-
         switch(location) {
             case AZ_ROAD:
                 controller.goTo(FROM_AZ_ROAD_TO_BOSSROOM);
+                controller.waiting(6000);
                 break;
             case KULLE_ROAD:
                 controller.goTo(FROM_KULLE_ROAD_TO_BOSSROOM);

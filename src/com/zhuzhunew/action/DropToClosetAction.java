@@ -5,6 +5,7 @@ import com.zhuzhunew.core.Explorer;
 
 import static com.zhuzhunew.core.Configuration.CLOSET_TAGS;
 import static com.zhuzhunew.core.Configuration.FIRST_PACKAGE_SLOT;
+import static com.zhuzhunew.core.Configuration.PACKAGE_SIZE;
 
 /**
  * Created by yifazhu on 3/25/17.
@@ -35,9 +36,9 @@ public class DropToClosetAction extends BaseAction {
 
         int x, y;
         for (int i = 0; i < 10; i++) {
-            x = FIRST_PACKAGE_SLOT[0] + i * 50;
+            x = FIRST_PACKAGE_SLOT[0] + i * PACKAGE_SIZE;
             for (int j = 0; j < 6; j++) {
-                y = FIRST_PACKAGE_SLOT[1] + j * 50;
+                y = FIRST_PACKAGE_SLOT[1] + j * PACKAGE_SIZE;
                 controller.moveMouseTo(x, y);
                 controller.rightClick();
                 if (!explorer.isClosetAvailable()) {

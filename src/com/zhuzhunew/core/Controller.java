@@ -108,4 +108,8 @@ public class Controller {
     public void confirm() {
         clickKey(KeyEvent.VK_ENTER);
     }
+
+    public void teleport() {
+        clickKey(KeyEvent.VK_T);
+    }
 }

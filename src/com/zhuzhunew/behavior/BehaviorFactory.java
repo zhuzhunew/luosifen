@@ -34,8 +34,8 @@ public class BehaviorFactory {
         return new ClosetBehavior(behaviorContext);
     }
 
-    public EnterBossRoomBehavior getEnterBossRoomBehavior() {
-        return new EnterBossRoomBehavior(behaviorContext);
+    public EnterBossRoomBehavior getEnterBossRoomBehavior(MapLocation location) {
+        return new EnterBossRoomBehavior(behaviorContext, location);
     }
 
     public EnterGameBehavior getEnterGameBehavior() {
@@ -46,8 +46,8 @@ public class BehaviorFactory {
         return new KulleRoomBehavior(behaviorContext);
     }
 
-    public MapRunningBehavior getMapRunningBehavior(int[][] steps) {
-        return new MapRunningBehavior(behaviorContext, steps);
+    public MapRunningBehavior getMapRunningBehavior(int[][] steps, boolean stopWhenLegendFound, boolean isBossRoom) {
+        return new MapRunningBehavior(behaviorContext, steps, stopWhenLegendFound, isBossRoom);
     }
 
     public MapTeleportBehavior getMapTeleportBehavior(MapLocation location) {

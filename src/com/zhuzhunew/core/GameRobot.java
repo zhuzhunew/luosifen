@@ -12,8 +12,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.zhuzhunew.core.Configuration.AZ_ROAD_STEPS;
-import static com.zhuzhunew.core.Configuration.MAIN_LOOP;
+import static com.zhuzhunew.core.Configuration.*;
 
 /**
  * Created by 一帆 on 2017/3/21.
@@ -31,22 +30,32 @@ public class GameRobot {
         BehaviorFactory behaviorFactory = new BehaviorFactory(behaviorContext);
 
         List<Behavior> behaviorChain = new ArrayList<>();
-//        behaviorChain.add(behaviorFactory.getEnterGameBehavior());
+        behaviorChain.add(behaviorFactory.getEnterGameBehavior());
 //        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.KULLE_ROAD));
+//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
+//        behaviorChain.add(behaviorFactory.getBlackSmithBehavior(Position.STATION));
+//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.A1_1));
+//        behaviorChain.add(behaviorFactory.getMapRunningBehavior(A1_1_STEPS));
+//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
+//        behaviorChain.add(behaviorFactory.getBlackSmithBehavior(Position.STATION));
+        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.A1_2));
+        behaviorChain.add(behaviorFactory.getMapRunningBehavior(A1_2_STEPS, true, false));
+//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
+//        behaviorChain.add(behaviorFactory.getBlackSmithBehavior(Position.STATION));
+        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.A2_1));
+        behaviorChain.add(behaviorFactory.getMapRunningBehavior(A2_1_STEPS, false, false));
 //        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
 //        behaviorChain.add(behaviorFactory.getBlackSmithBehavior(Position.STATION));
         behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.AZ_ROAD));
-        behaviorChain.add(behaviorFactory.getMapRunningBehavior(AZ_ROAD_STEPS));
-//        behaviorChain.add(behaviorFactory.getEnterBossRoomBehavior());
-//        behaviorChain.add(behaviorFactory.getAzmodanRoomBehavior());
-//        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.KULLE_ROAD));
-//        behaviorChain.add(behaviorFactory.getMapRunningBehavior());
-//        behaviorChain.add(behaviorFactory.getEnterBossRoomBehavior());
-//        behaviorChain.add(behaviorFactory.getKulleRoomBehavior());
+        behaviorChain.add(behaviorFactory.getMapRunningBehavior(AZ_ROAD_STEPS, false, false));
 //        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
 //        behaviorChain.add(behaviorFactory.getBlackSmithBehavior(Position.STATION));
-//        behaviorChain.add(behaviorFactory.getClosetBehavior());
-//        behaviorChain.add(behaviorFactory.getLeaveGameBehavior());
+        behaviorChain.add(behaviorFactory.getEnterBossRoomBehavior(MapLocation.AZ_ROAD));
+        behaviorChain.add(behaviorFactory.getMapRunningBehavior(AZ_ROOM_STEPS, false, true));
+        behaviorChain.add(behaviorFactory.getMapTeleportBehavior(MapLocation.BASE));
+        behaviorChain.add(behaviorFactory.getBlackSmithBehavior(Position.STATION));
+        behaviorChain.add(behaviorFactory.getClosetBehavior());
+        behaviorChain.add(behaviorFactory.getLeaveGameBehavior());
 
         Thread.sleep(3000);
         for (int i = 0; i < MAIN_LOOP; i++) {

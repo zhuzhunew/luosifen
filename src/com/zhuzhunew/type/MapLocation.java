@@ -6,5 +6,8 @@ package com.zhuzhunew.type;
 public enum MapLocation {
     AZ_ROAD,
     KULLE_ROAD,
-    BASE;
+    BASE,
+    A1_1,
+    A1_2,
+    A2_1;
 }

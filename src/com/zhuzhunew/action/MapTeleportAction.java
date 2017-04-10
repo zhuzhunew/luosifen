@@ -1,6 +1,7 @@
 package com.zhuzhunew.action;
 
 import com.zhuzhunew.core.Controller;
+import com.zhuzhunew.core.Explorer;
 import com.zhuzhunew.type.MapLocation;
 
 import static com.zhuzhunew.core.Configuration.*;
@@ -19,6 +20,7 @@ public class MapTeleportAction extends BaseAction {
 
     @Override
     public void act() {
+        closeChat();
         Controller controller = actionContext.getController();
         controller.openCloseMap();
         controller.waiting(500);
@@ -41,9 +43,32 @@ public class MapTeleportAction extends BaseAction {
                 controller.waiting(500);
                 controller.goTo(BASE_MAP_LOCATION);
                 break;
+            case A1_1:
+                controller.goTo(ACT1_MAP_LOCATION);
+                controller.waiting(500);
+                controller.goTo(A1_1_LOCATION);
+                break;
+            case A1_2:
+                controller.goTo(ACT1_MAP_LOCATION);
+                controller.waiting(500);
+                controller.goTo(A1_2_LOCATION);
+                break;
+            case A2_1:
+                controller.goTo(ACT2_MAP_LOCATION);
+                controller.waiting(500);
+                controller.goTo(A2_1_LOCATION);
+                break;
             default:
                 break;
         }
         controller.waiting(SCENE_GAP);
+    }
+
+    private void closeChat() {
+        Explorer explorer = actionContext.getExplorer();
+        Controller controller = actionContext.getController();
+        if (explorer.isChatting()) {
+            controller.confirm();
+        }
     }
 }

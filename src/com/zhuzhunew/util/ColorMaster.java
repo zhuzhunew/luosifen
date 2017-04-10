@@ -1,10 +1,8 @@
 package com.zhuzhunew.util;
 
-import com.zhuzhunew.core.Configuration;
-
-import static com.zhuzhunew.core.Configuration.EMPTY_SLOT_CENTER_RGB;
-import static com.zhuzhunew.core.Configuration.LEGEND_RGB;
-import static com.zhuzhunew.core.Configuration.SET_RGB;
+import static com.zhuzhunew.core.Configuration.*;
+import static com.zhuzhunew.core.Configuration.BREATH_RGB2;
+import static com.zhuzhunew.core.Configuration.BREATH_RGB3;
 
 /**
  * Created by 一帆 on 3/22/17.
@@ -12,22 +10,91 @@ import static com.zhuzhunew.core.Configuration.SET_RGB;
 public final class ColorMaster {
     private ColorMaster() {}
 
-    public static boolean isLegendNameTagFrontColor(int rgb) {
-        return LEGEND_RGB[0] == getRed(rgb)
-                && LEGEND_RGB[1] == getGreen(rgb)
-                && LEGEND_RGB[2] == getBlue(rgb);
+    public static boolean isLegendNameTagFrontColor1(int rgb) {
+        return similarTo(LEGEND_RGB1[0], getRed(rgb), LEGEND_RGB1_TOLERANCE)
+                && similarTo(LEGEND_RGB1[1], getGreen(rgb), LEGEND_RGB1_TOLERANCE)
+                && similarTo(LEGEND_RGB1[2], getBlue(rgb), LEGEND_RGB1_TOLERANCE);
     }
 
-    public static boolean isSetNameTagFrontColor(int rgb) {
-        return SET_RGB[0] == getRed(rgb)
-                && SET_RGB[1] == getGreen(rgb)
-                && SET_RGB[2] == getBlue(rgb);
+    public static boolean isLegendNameTagFrontColor2(int rgb) {
+        return similarTo(LEGEND_RGB2[0], getRed(rgb), LEGEND_RGB2_TOLERANCE)
+                && similarTo(LEGEND_RGB2[1], getGreen(rgb), LEGEND_RGB2_TOLERANCE)
+                && similarTo(LEGEND_RGB2[2], getBlue(rgb), LEGEND_RGB2_TOLERANCE);
+    }
+
+    public static boolean isLegendNameTagFrontColor3(int rgb) {
+        return similarTo(LEGEND_RGB3[0], getRed(rgb), LEGEND_RGB3_TOLERANCE)
+                && similarTo(LEGEND_RGB3[1], getGreen(rgb), LEGEND_RGB3_TOLERANCE)
+                && similarTo(LEGEND_RGB3[2], getBlue(rgb), LEGEND_RGB3_TOLERANCE);
+    }
+
+
+    public static boolean isSetNameTagFrontColor1(int rgb) {
+        return similarTo(SET_RGB1[0], getRed(rgb), SET_RGB1_TOLERANCE)
+                && similarTo(SET_RGB1[1], getGreen(rgb), SET_RGB1_TOLERANCE)
+                &&  similarTo(SET_RGB1[2], getBlue(rgb), SET_RGB1_TOLERANCE);
+    }
+
+    public static boolean isSetNameTagFrontColor2(int rgb) {
+        return similarTo(SET_RGB2[0], getRed(rgb), SET_RGB2_TOLERANCE)
+                && similarTo(SET_RGB2[1], getGreen(rgb), SET_RGB2_TOLERANCE)
+                &&  similarTo(SET_RGB2[2], getBlue(rgb), SET_RGB2_TOLERANCE);
+    }
+
+    public static boolean isSetNameTagFrontColor3(int rgb) {
+        return similarTo(SET_RGB3[0], getRed(rgb), SET_RGB3_TOLERANCE)
+                && similarTo(SET_RGB3[1], getGreen(rgb), SET_RGB3_TOLERANCE)
+                &&  similarTo(SET_RGB3[2], getBlue(rgb), SET_RGB3_TOLERANCE);
+    }
+
+    public static boolean isBreathNameTagFrontColor1(int rgb) {
+        return similarTo(BREATH_RGB1[0], getRed(rgb), BREATH_RGB1_TOLERANCE)
+                && similarTo(BREATH_RGB1[1], getGreen(rgb), BREATH_RGB1_TOLERANCE)
+                &&  similarTo(BREATH_RGB1[2], getBlue(rgb), BREATH_RGB1_TOLERANCE);
+    }
+
+    public static boolean isBreathNameTagFrontColor2(int rgb) {
+        return similarTo(BREATH_RGB2[0], getRed(rgb), BREATH_RGB2_TOLERANCE)
+                && similarTo(BREATH_RGB2[1], getGreen(rgb), BREATH_RGB2_TOLERANCE)
+                &&  similarTo(BREATH_RGB2[2], getBlue(rgb), BREATH_RGB2_TOLERANCE);
+    }
+
+    public static boolean isBreathNameTagFrontColor3(int rgb) {
+        return similarTo(BREATH_RGB3[0], getRed(rgb), BREATH_RGB3_TOLERANCE)
+                && similarTo(BREATH_RGB3[1], getGreen(rgb), BREATH_RGB3_TOLERANCE)
+                &&  similarTo(BREATH_RGB3[2], getBlue(rgb), BREATH_RGB3_TOLERANCE);
     }
 
     public static boolean isEmptySlotCenterColor(int rgb) {
-        return EMPTY_SLOT_CENTER_RGB[0] == getRed(rgb)
-                && EMPTY_SLOT_CENTER_RGB[1] == getGreen(rgb)
-                && EMPTY_SLOT_CENTER_RGB[2] == getBlue(rgb);
+        return similarTo(EMPTY_SLOT_CENTER_RGB[0], getRed(rgb))
+                && similarTo(EMPTY_SLOT_CENTER_RGB[1], getGreen(rgb))
+                && similarTo(EMPTY_SLOT_CENTER_RGB[2], getBlue(rgb));
+    }
+
+    public static boolean isDeathPointColor(int rgb) {
+        return DEATH_CHECK_POINT_RGB[0] == getRed(rgb)
+                && DEATH_CHECK_POINT_RGB[1] == getGreen(rgb)
+                && DEATH_CHECK_POINT_RGB[2] == getBlue(rgb);
+    }
+
+    public static boolean isChattingColor(int rgb) {
+        return CHATTING_RGB[0] == getRed(rgb)
+                && CHATTING_RGB[1] == getGreen(rgb)
+                && CHATTING_RGB[2] == getBlue(rgb);
+    }
+
+    public static boolean isBossRoomCheckPointColor(int rgb) {
+        return BOSS_ROOM_CHECK_POINT_RGB[0] == getRed(rgb)
+                && BOSS_ROOM_CHECK_POINT_RGB[1] == getGreen(rgb)
+                && BOSS_ROOM_CHECK_POINT_RGB[2] == getBlue(rgb);
+    }
+
+    private static boolean similarTo(int c1, int c2) {
+        return c2 < c1 + COLOR_TOLERANCE && c2 > c1 - COLOR_TOLERANCE;
+    }
+
+    private static boolean similarTo(int c1, int c2, int tolerance) {
+        return c2 < c1 + tolerance && c2 > c1 - tolerance;
     }
 
     private static int getAlpha(int rgb) {
